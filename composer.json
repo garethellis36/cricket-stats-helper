@@ -3,7 +3,7 @@
   "description": "A simple PHP library for calculating cricket statistics such as batting average, bowling average and bowling economy. Can also convert number of overs bowled in scorecard notation to number of balls bowled, and vice-versa.",
   "require": {
     "php": ">=5.3.0",
-    "phpunit/phpunit": "^5.1"
+    "phpunit/phpunit": "^4.8"
   },
   "autoload": {
     "psr-4": {
