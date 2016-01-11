@@ -1,5 +1,5 @@
 {
-  "name": "Garethellis/cricket-stats-helper",
+  "name": "garethellis/cricket-stats-helper",
   "description": "A simple PHP library for calculating cricket statistics such as batting average, bowling average and bowling economy. Can also convert number of overs bowled in scorecard notation to number of balls bowled, and vice-versa.",
   "config": {
     "platform": {

@@ -11,7 +11,7 @@ Can also convert number of overs bowled in scorecard notation to number of balls
 Install with composer, obvs:
 
 ``` bash
-$ composer require Garethellis/cricket-stats-helper
+$ composer require garethellis/cricket-stats-helper
 ```
 
 
