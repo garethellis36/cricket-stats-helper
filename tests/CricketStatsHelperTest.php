@@ -15,40 +15,40 @@ class CricketStatsHelperTest extends \PHPUnit_Framework_TestCase
         $this->helper = new CricketStatsHelper();
     }
 
-    public $overs = [
-        [
+    public $overs = array(
+        array(
             "overs" => 1,
             "balls" => 6
-        ],
-        [
+        ),
+        array(
             "overs" => 3,
             "balls" => 18
-        ],
-        [
+        ),
+        array(
             "overs" => 5,
             "balls" => 30
-        ],
-        [
+        ),
+        array(
             "overs" => 2.1,
             "balls" => 13
-        ],
-        [
+        ),
+        array(
             "overs" => 2.2,
             "balls" => 14
-        ],
-        [
+        ),
+        array(
             "overs" => 4.3,
             "balls" => 27
-        ],
-        [
+        ),
+        array(
             "overs" => 6.4,
             "balls" => 40
-        ],
-        [
+        ),
+        array(
             "overs" => 5.5,
             "balls" => 35
-        ],
-    ];
+        ),
+    );
 
     public function testConvertOversToBalls()
     {
@@ -64,32 +64,32 @@ class CricketStatsHelperTest extends \PHPUnit_Framework_TestCase
         }
     }
 
-    private $battingInputs = [
-        [
+    private $battingInputs = array(
+        array(
             "runs" => 150,
             "innings" => 10,
             "not_outs" => 0,
             "average" => 15
-        ],
-        [
+        ),
+        array(
             "runs" => 12,
             "innings" => 2,
             "not_outs" => 1,
             "average" => 12
-        ],
-        [
+        ),
+        array(
             "runs" => 255,
             "innings" => 12,
             "not_outs" => 2,
             "average" => 25.5
-        ],
-        [
+        ),
+        array(
             "runs" => 75,
             "innings" => 2,
             "not_outs" => 2,
             "average" => false
-        ],
-    ];
+        ),
+    );
 
     public function testCalculateBattingAverage()
     {
@@ -106,23 +106,23 @@ class CricketStatsHelperTest extends \PHPUnit_Framework_TestCase
 
     }
 
-    private $bowlingAverageInputs = [
-        [
+    private $bowlingAverageInputs = array(
+        array(
             "runs" => 100,
             "wickets" => 10,
             "average" => 10
-        ],
-        [
+        ),
+        array(
             "runs" => 50,
             "wickets" => 0,
             "average" => false
-        ],
-        [
+        ),
+        array(
             "runs" => 185,
             "wickets" => 10,
             "average" => 18.5
-        ]
-    ];
+        )
+    );
 
     public function testCalculateBowlingAverage()
     {
@@ -137,23 +137,23 @@ class CricketStatsHelperTest extends \PHPUnit_Framework_TestCase
         }
     }
 
-    private $bowlingEconomyInputs = [
-        [
+    private $bowlingEconomyInputs = array(
+        array(
             "runs" => 50,
             "overs" => 5,
             "econ" => 10
-        ],
-        [
+        ),
+        array(
             "runs" => 50,
             "overs" => 0,
             "econ" => false
-        ],
-        [
+        ),
+        array(
             "runs" => 165,
             "overs" => 20,
             "econ" => 8.25
-        ]
-    ];
+        )
+    );
 
     public function testCalculateBowlingEconomy()
     {
