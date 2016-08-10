@@ -1,5 +1,6 @@
 <?php
 namespace Garethellis\CricketStatsHelper\Test;
+
 use Garethellis\CricketStatsHelper\CricketStatsHelper;
 
 class CricketStatsHelperTest extends \PHPUnit_Framework_TestCase
@@ -8,7 +9,7 @@ class CricketStatsHelperTest extends \PHPUnit_Framework_TestCase
      * @var CricketStatsHelper
      */
     private $helper;
-    
+
     public function setUp()
     {
         parent::setUp();
@@ -164,6 +165,42 @@ class CricketStatsHelperTest extends \PHPUnit_Framework_TestCase
                 $this->helper->calculateBowlingEconomy(
                     $input["overs"],
                     $input["runs"]
+                )
+            );
+        }
+    }
+
+    public function testCalculateStrikeRate()
+    {
+        $inputs = [
+            [
+                "overs" => "5",
+                "wickets" => 2,
+                "strike_rate" => "15"
+            ],
+            [
+                "overs" => "10",
+                "wickets" => 1,
+                "strike_rate" => "60",
+            ],
+            [
+                "overs" => "2.3",
+                "wickets" => 3,
+                "strike_rate" => "5"
+            ],
+            [
+                "overs" => "4",
+                "wickets" => 0,
+                "strike_rate" => null
+            ]
+        ];
+
+        foreach ($inputs as $input) {
+            $this->assertEquals(
+                $input["strike_rate"],
+                $this->helper->calculateStrikeRate(
+                    $input["overs"],
+                    $input["wickets"]
                 )
             );
         }

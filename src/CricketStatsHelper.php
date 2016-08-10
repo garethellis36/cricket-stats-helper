@@ -169,4 +169,24 @@ class CricketStatsHelper
     {
         return (float)($balls / $this->ballsPerOver);
     }
+
+    /**
+     * Calculate bowling strike rate, a measure of how often a bowler takes a wicket.
+     *
+     * @param mixed $overs The number of overs bowled in scorecard notation, e.g. 10.3 for 10 overs and 3 balls
+     * @param int $wickets The number of wickets taken conceded
+     */
+    public function calculateStrikeRate($overs, $wickets)
+    {
+        if (!is_numeric($overs)) {
+            throw new \InvalidArgumentException('$overs must be int, numeric string or float');
+        }
+        if (!is_int($wickets)) {
+            throw new \InvalidArgumentException('$wickets must be of type int');
+        }
+        if ($overs == 0 || $wickets == 0) {
+            return false;
+        }
+        return (float)($this->convertOversToBalls($overs) / $wickets);
+    }
 }
